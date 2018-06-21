@@ -2,6 +2,7 @@ build-essential
 binutils
 cpp-5
 libc6
+libc6-dev
 libcc1-0
 libgcc-5-dev
 libgcc1
