@@ -35,12 +35,15 @@ echo "Downloading $pcre_tarball_url"
 echo "Downloading $headers_more_nginx_module_url"
 (cd nginx-${NGINX_VERSION} && curl -L $headers_more_nginx_module_url | tar xvz )
 
+echo '#!/bin/sh' > /tmp/gcc-with-flags.sh
+echo "exec /app/.apt/usr/bin/gcc --sysroot=/app/.apt \"\$@\"" >> /tmp/gcc-with-flags.sh
+chmod +x /tmp/gcc-with-flags.sh
+
 (
 	cd nginx-${NGINX_VERSION}
     export LD_LIBRARY_PATH=/app/.apt/usr/lib:/app/.apt/usr/lib/x86_64-linux-gnu
 	./configure \
-		--with-cc=/app/.apt/usr/bin/gcc \
-		--with-cc-opt=" --sysroot=/app/.apt " \
+		--with-cc=/tmp/gcc-with-flags.sh \
 		--with-pcre=pcre-${PCRE_VERSION} \
 		--prefix=/tmp/nginx \
 		--add-module=/${temp_dir}/nginx-${NGINX_VERSION}/headers-more-nginx-module-${HEADERS_MORE_VERSION} \
