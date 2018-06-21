@@ -24,3 +24,5 @@ bison
 libisl15
 libisl-dev
 make
+zlib1g
+zlib1g-dev
