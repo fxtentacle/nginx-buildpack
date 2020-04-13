@@ -1,5 +1,18 @@
 # Heroku Buildpack: NGINX
 
+```
+nginx-1.16.1 
+pcre-8.44 
+headers-more-nginx-0.33
+``` 
+compiled using 
+`gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04)` 
+on 
+`heroku-18`
+
+
+
+
 Nginx-buildpack vendors NGINX inside a dyno and connects NGINX to an app server via UNIX domain sockets.
 
 ## Motivation
