@@ -42,7 +42,7 @@ chmod +x /tmp/gcc-with-flags.sh
 (
 	cd nginx-${NGINX_VERSION}
   export LD_LIBRARY_PATH=/app/.apt/usr/lib:/app/.apt/usr/lib/x86_64-linux-gnu
-	./configure --with-cc=/tmp/gcc-with-flags.sh --with-pcre=pcre-${PCRE_VERSION} --prefix=/tmp/nginx --add-module=/${temp_dir}/nginx-${NGINX_VERSION}/headers-more-nginx-module-${HEADERS_MORE_VERSION} --with-http_gzip_static_module
+	./configure --with-cc=/tmp/gcc-with-flags.sh --with-pcre=pcre-${PCRE_VERSION} --prefix=/tmp/nginx --add-module=/${temp_dir}/nginx-${NGINX_VERSION}/headers-more-nginx-module-${HEADERS_MORE_VERSION} --with-http_gzip_static_module  --with-cc-opt="-Wno-error"
 	make install
 )
 
