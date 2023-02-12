@@ -26,3 +26,5 @@ libisl-dev
 make
 zlib1g
 zlib1g-dev
+libcrypt1
+libcrypt-dev
