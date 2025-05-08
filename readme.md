@@ -1,14 +1,14 @@
 # Heroku Buildpack: NGINX
 
 ```
-nginx-1.20.2 
+nginx-1.26.2 
 pcre-8.45 
-headers-more-nginx-0.33
+headers-more-nginx-0.38
 ``` 
 compiled using 
 `gcc version 7.5.0 (Ubuntu 7.5.0-6ubuntu2)` 
 on 
-`heroku-20`
+`heroku-22`
 
 
 
