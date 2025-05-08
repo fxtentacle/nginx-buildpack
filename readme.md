@@ -6,7 +6,7 @@ pcre-8.45
 headers-more-nginx-0.38
 ``` 
 compiled using 
-`gcc version 7.5.0 (Ubuntu 7.5.0-6ubuntu2)` 
+`gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ` 
 on 
 `heroku-22`
 

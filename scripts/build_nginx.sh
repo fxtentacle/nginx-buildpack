@@ -36,7 +36,7 @@ echo "Downloading $headers_more_nginx_module_url"
 (cd nginx-${NGINX_VERSION} && curl -L $headers_more_nginx_module_url | tar xvz )
 
 echo '#!/bin/sh' > /tmp/gcc-with-flags.sh
-echo "exec /app/.apt/usr/bin/gcc-7 --sysroot=/app/.apt \"\$@\"" >> /tmp/gcc-with-flags.sh
+echo "exec /usr/bin/gcc-11 --sysroot=/app/.apt \"\$@\"" >> /tmp/gcc-with-flags.sh
 chmod +x /tmp/gcc-with-flags.sh
 
 (
